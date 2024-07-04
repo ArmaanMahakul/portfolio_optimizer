@@ -31,3 +31,11 @@ The Portfolio Optimizer App is a web-based application built using Streamlit tha
    ```sh
    git clone https://github.com/your-repo/portfolio-optimizer.git
    cd portfolio-optimizer
+
+2. Install the required packages in the requirements.txt file:
+   '''sh
+   pip install -r requirements.txt
+3. To start the application run the following command
+   '''sh
+   streamlit run app.py
+
