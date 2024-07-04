@@ -34,9 +34,84 @@ The Portfolio Optimizer App is a web-based application built using Streamlit tha
 
 2. Install the required packages in the requirements.txt file:
    
-   pip install -r requirements.txt
+       pip install -r requirements.txt
+
+
+## Usage
+
+   To start the application, navigate to the project directory and run:
+
+    streamlit run app.py
    
-4. To start the application run the following command:
+## Components
+### PortfolioOptimizer Class
+
+The PortfolioOptimizer class handles all the backend calculations and data fetching. It includes methods to download stock data,     calculate returns, optimize the portfolio, and generate various plots. Here's a brief overview of its methods:
+
+- **__init__**: Initializes the class with stock list, date range, period, and number of portfolios.
+
+- **download_data**: Downloads adjusted close prices for the given stock list.
+
+- **get_stock_info**: Fetches detailed information about each stock.
+
+- **download_benchmark_data**: Downloads NIFTY50 benchmark data.
+
+- **benchmark_returns**: Calculates benchmark returns.
+
+- **calculate_returns**: Calculates daily returns for the stocks.
+
+- **risk_free_rate_of_return**: Fetches the 10-year US Treasury Bond rate as the risk-free rate.
+
+- **portfolio_return**: Calculates the portfolio's expected return.
+
+- **portfolio_volatility**: Calculates the portfolio's volatility.
+    
+- **negative_sharpe_ratio**: Calculates the negative Sharpe Ratio for optimization.
+    
+- **calculate_efficient_frontier**: Generates the efficient frontier for the given stocks.
+    
+- **tracking_error_user**: Calculates the tracking error for user-defined weights.
+    
+- **tracking_error_best_portfolio**: Calculates the tracking error for the optimized portfolio.
+    
+- **best_sharpe_ratio_portfolio**: Returns the portfolio with the highest Sharpe Ratio.
+    
+- **plot_graph**: Plots the efficient frontier.
+    
+- **print_all_portfolios**: Displays all generated portfolios with their metrics.
+    
+- **plot_weights_bar_chart**: Compares optimal and user-defined portfolio weights.
+    
+- **plot_weights_pie_chart**: Plots a pie chart of portfolio weights.
+    
+- **plot_portfolio_movement**: Compares the movement of the optimized portfolio, user portfolio, and benchmark over time.
+
+### Streamlit Application
+The Streamlit application provides a user-friendly interface to interact with the **PortfolioOptimizer** class. Users can select stocks, define portfolio weights, set date ranges, and view various visualizations and metrics.
+
+#### Sidebar
+- **Stock Selection**: Users can select the number of stocks and choose specific companies and exchanges.
+- **Date Range**: Users can set the start and end dates for the analysis.
+- **Period**: Users can choose between yearly and monthly periods.
+- **User Portfolio Weights**: Users can define their own portfolio weights.
+- **Frequency**: Users can select the frequency (daily, monthly, yearly) for visualizations.
+
+#### Pages
+
+- **Stock Information**: Displays the latest one-day stock data and detailed information about the selected stocks.
+  
+- **Stock Optimizer**: Optimizes the portfolio, displays the efficient frontier, and compares the user-defined portfolio with the optimized portfolio.
+
+## Features
+
+- Download historical stock data from Yahoo Finance
+- Calculate daily and periodic returns
+- Optimize portfolio based on Sharpe Ratio
+- Generate and plot the efficient frontier
+- Compare user-defined portfolio with optimized portfolio
+- Display detailed stock information and financial metrics
+- Visualize portfolio weights and cumulative returns
+
    
-   streamlit run app.py
+
 
