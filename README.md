@@ -15,7 +15,8 @@
 
 
 ## Introduction
-The Portfolio Optimizer App is a web-based application built using Streamlit that allows users to optimize their stock portfolios. The application leverages Yahoo Finance to fetch historical stock data and the SciPy library for optimization. It calculates the efficient frontier, optimal portfolio, and various metrics like Sharpe Ratio, volatility, and returns. Additionally, the app provides visualizations and comparisons between user-defined portfolios and optimized portfolios.
+The Portfolio Optimizer App is a web-based application built using Streamlit that allows users to optimize their stock portfolios. The application leverages Yahoo Finance to fetch historical stock data and the SciPy library for optimization. It calculates the efficient frontier, optimal portfolio, and various metrics like Sharpe Ratio, volatility, and returns. Additionally, the app provides visualizations and comparisons between user-defined portfolios and optimized portfolios. Check out the working website for this project directly on:
+https://portfoliooptimizerarmaanmahakul.streamlit.app/
 
 ## Requirements
 - Python 3.7 or higher
